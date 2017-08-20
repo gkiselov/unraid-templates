@@ -12,6 +12,7 @@
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://registry.kiselovdev.com/docker-plex-pass/</Registry>
+  <GitHub>https://github.com/gkiselov/unraid-templates</GitHub>
   <Repository>registry.kiselovdev.com/docker-plex-pass</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -26,7 +27,7 @@
     </Variable>
     <Variable>
       <Name>VERSION</Name>
-      <Value>latest</Value>
+      <Value>0.1</Value>
     </Variable>
   </Environment>
   <Networking>
