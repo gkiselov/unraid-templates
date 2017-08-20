@@ -26,7 +26,7 @@
       <Value>100</Value>
     </Variable>
     <Variable>
-      <Name>VERSION</Name>
+      <Name>Version</Name>
       <Value>0.1</Value>
     </Variable>
   </Environment>
@@ -41,7 +41,7 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
-  <Icon>https://github.com/gkiselov/unraid-templates/blob/master/templates/img/plex-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/templates/img/plex-icon.png</Icon>
   <ExtraParams></ExtraParams>
   <BaseImage>ubuntu/16.04</BaseImage>
 </Container>
