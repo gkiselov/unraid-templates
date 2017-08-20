@@ -21,8 +21,8 @@
   [b]/media[/b] Map this to your media, you can use several submappings here[br]
   </Description>
   <Project>https://plex.tv/</Project>
-  <Registry>https://register.kiselovdev.com/docker-plex-pass/</Registry>
-  <Repository>register.kiselovdev.com/docker-plex-pass</Repository>
+  <Registry>https://registry.kiselovdev.com/docker-plex-pass/</Registry>
+  <Repository>registry.kiselovdev.com/docker-plex-pass</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -49,8 +49,8 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<WebUI>http://[IP]:[PORT:32400]/web</WebUI>
+  <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
   <Icon>https://github.com/gkiselov/unraid-templates/blob/master/templates/img/plex-icon.png</Icon>
   <ExtraParams></ExtraParams>
-<BaseImage>ubuntu/16.04</BaseImage>
+  <BaseImage>ubuntu/16.04</BaseImage>
 </Container>
