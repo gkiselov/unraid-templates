@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://gitlab.kiselovdev.com/docker/unraid-templates/raw/develop/plex.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/plex.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <Date>2017-08-20</Date>
   <Changes></Changes>
-  <Name>plex</Name>
-  <Support></Support>
+  <Name>Plex Media Server</Name>
+  <Support>https://forums.plex.tv/categories/docker</Support>
   <Description>
-  Plex organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. [br]
+  [b]Plex Media Server[/b][br][br]
+ 
+    Enjoy your media on all your devices.[br]
+    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love.
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://hub.docker.com/r/gkiselov/plex/</Registry>
@@ -18,6 +21,10 @@
   <Privileged>false</Privileged>
   <Environment>
     <Variable>
+      <Name>PLEX_CLAIM</Name>
+      <Value>Insert Token from https://plex.tv/claim</Value>
+    </Variable>
+    <Variable>
       <Name>PUID</Name>
       <Value>99</Value>
     </Variable>
@@ -26,8 +33,8 @@
       <Value>100</Value>
     </Variable>
     <Variable>
-      <Name>Version</Name>
-      <Value>0.1</Value>
+      <Name>VERSION</Name>
+      <Value>latest</Value>
     </Variable>
   </Environment>
   <Networking>
@@ -39,9 +46,18 @@
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/transcode</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
   <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/templates/img/plex-icon.png</Icon>
   <ExtraParams></ExtraParams>
-  <BaseImage>ubuntu/16.04</BaseImage>
 </Container>
