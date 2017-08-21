@@ -11,9 +11,9 @@
   Plex organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. [br]
   </Description>
   <Project>https://plex.tv/</Project>
-  <Registry>https://registry.kiselovdev.com/docker-plex-pass/</Registry>
+  <Registry>https://hub.docker.com/r/gkiselov/plex/</Registry>
   <GitHub>https://github.com/gkiselov/unraid-templates</GitHub>
-  <Repository>registry.kiselovdev.com/docker-plex-pass</Repository>
+  <Repository>gkiselov/plex</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
