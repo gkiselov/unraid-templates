@@ -58,6 +58,6 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
-  <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/templates/img/plex-icon.png</Icon>
+  <Icon>https://github.com/gkiselov/unraid-templates/raw/master/kiselovdev/img/plex-icon.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
