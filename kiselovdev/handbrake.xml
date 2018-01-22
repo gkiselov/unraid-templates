@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://gitlab.kiselovdev.com/docker/unraid-templates/raw/develop/plex.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/handbrake.xml</TemplateURL>
   <Beta>False</Beta>
-  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
-  <Date>2017-08-20</Date>
+  <Category>MediaServer:Video</Category>
+  <Date>2018-01-22</Date>
   <Changes>
-    [center][img width='300px' src='https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_small.png'][/center]
+  [center][img width='300px' src='https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/img/handbrake-logo.png'][/center]
 
-[center][font size=4]Plex Media Server Change Log[/font][/center]
+  [center][font size=4]HandBrake Server Change Log[/font][/center]
 
-  [b]20.08.2017:[/b] Rebase to ubuntu xenial with S6 overlay.</Changes>
-  <Name>plex</Name>
-  <Support>http://lime-technology.com/forum/index.php?topic=42148.0</Support>
+  [b]22.01.2018:[/b] Initial config file. </Changes>
+  <Name>handbrake</Name>
+  <Support>http://kiselovdev.com</Support>
   <Description>
-  Plex organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. [br]
-
-  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-  [b]VERSION[/b] Set to either latest, public or a specific version e.g. "1.2.7.2987-1bef33a" [br]
-  [b]/config[/b] Where plex should store settings and metadata\logs and configuration[br]
-  [b]/media[/b] Map this to your media, you can use several submappings here[br]
+  HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs. [br]
   </Description>
-  <Project>https://plex.tv/</Project>
-  <Registry>https://register.kiselovdev.com/docker-plex-pass/</Registry>
-  <Repository>register.kiselovdev.com/docker-plex-pass</Repository>
+  <Project>https://handbrake.fr/</Project>
+  <Registry>https://hub.docker.com/r/jlesage/handbrake/</Registry>
+  <GitHub>https://github.com/gkiselov/unraid-templates</GitHub>
+  <Repository>jlesage/handbrake</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
-    <Variable>
+   <Variable>
       <Name>PUID</Name>
       <Value>99</Value>
     </Variable>
@@ -40,20 +36,38 @@
     </Variable>
   </Environment>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <ContainerDir>/docker/appdata/handbrake</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>$HOME/HandBrake/watch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>$HOME/HandBrake/output</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<WebUI>http://[IP]:[PORT:32400]/web</WebUI>
-  <Icon>https://gitlab.kiselovdev.com/docker/unraid-templates/blob/develop/img/plex-icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:5800]/web</WebUI>
+  <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/img/handbrake-logo.png</Icon>
   <ExtraParams></ExtraParams>
-<DonateText>Donations</DonateText>
-<DonateLink>https://www.linuxserver.io/donations/</DonateLink>
-<DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
-<BaseImage>ubuntu/16.04</BaseImage>
 </Container>
