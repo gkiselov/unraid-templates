@@ -58,6 +58,11 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
+      <ContainerDir>$HOME</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
       <ContainerDir>$HOME/HandBrake/watch</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
