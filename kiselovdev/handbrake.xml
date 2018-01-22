@@ -72,7 +72,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:5800]/web</WebUI>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/img/handbrake-logo.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
