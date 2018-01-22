@@ -53,26 +53,26 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/docker/appdata/handbrake</ContainerDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>$HOME</ContainerDir>
+      <ContainerDir>/storage</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/watch</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>$HOME/HandBrake/watch</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>$HOME/HandBrake/output</ContainerDir>
+      <ContainerDir>/output</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:5800]/web</WebUI>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <Icon>https://raw.githubusercontent.com/gkiselov/unraid-templates/master/kiselovdev/img/handbrake-logo.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
