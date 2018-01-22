@@ -59,7 +59,7 @@
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>$HOME</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>ro</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
