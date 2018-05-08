@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2018-04-19</Date>
+  <Beta>False</Beta>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Name>PlexMediaServer</Name>
+  <Project>https://plex.tv/</Project>
+  <Changes>
+[center][img width='155px' src='http://d2631fvi2jdnb6.cloudfront.net/docker/limetech.png'][/center]
+
+[center][font size=4]Plex Media Server Change Log[/font][/center]
+
+[font size=3]2018.05.08[/font]
+- Updated to Plex version 1.12.3.4973
+
+[font size=3]2018.05.08[/font]
+- Fixed user permissions on files and folders off of /config
+
+[font size=3]2018.05.08[/font]
+- Initial Release
+  </Changes>
+  <Overview>
+    The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!
+  </Overview>
+  <Description>
+    [b]Plex Media Server[/b][br][br]
+ 
+    Enjoy your media on all your devices.[br]
+    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love.
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this is where PMS will store it's databases and configuration.[br][br]
+    [b]//media/Movies[/b] : this is where PMS will looking for Movies files.[br][br]
+    [b]//media/Documentary[/b] : this is where PMS will looking for Documentary files.[br][br]
+    [b]//media/Music[/b] : this is where PMS will looking for Music files.[br][br]
+    [b]//media/TV Series[/b] : this is where PMS will looking for TV Series files.[br][br]
+    [b]Tip:[/b] You can add more volume mappings if you wish PMS has access to it.
+  </Description>
+  <Project>https://plex.tv/</Project>
+  <Registry>https://hub.docker.com/r/gkiselov/plex/</Registry>
+  <GitHub>https://github.com/limetech/dockerapp-plex</GitHub>
+  <GitHub>https://github.com/gkiselov/unraid-templates</GitHub>
+  <Repository>gkiselov/plex</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/PlexMediaServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Transcode</HostDir>
+      <ContainerDir>/transcode</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Movies</HostDir>
+      <ContainerDir>/media/Movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Documentary</HostDir>
+      <ContainerDir>/media/Documentary</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Music</HostDir>
+      <ContainerDir>/media/Music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/TV Series</HostDir>
+      <ContainerDir>/media/TV Series</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <Banner></Banner>
+  <Icon>https://github.com/gkiselov/unraid-templates/raw/master/kiselovdev/img/plex-icon.png</Icon>
+</Containers>
