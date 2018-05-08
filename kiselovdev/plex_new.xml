@@ -29,11 +29,11 @@
     All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love.
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this is where PMS will store it's databases and configuration.[br][br]
-    [b]//media/Movies[/b] : this is where PMS will looking for Movies files.[br][br]
-    [b]//media/Documentary[/b] : this is where PMS will looking for Documentary files.[br][br]
-    [b]//media/Music[/b] : this is where PMS will looking for Music files.[br][br]
-    [b]//media/TV Series[/b] : this is where PMS will looking for TV Series files.[br][br]
-    [b]Tip:[/b] You can add more volume mappings if you wish PMS has access to it.
+    [b]//media/Movies[/b] : this is where PMS will looking for Movies files.[br]
+    [b]//media/Documentary[/b] : this is where PMS will looking for Documentary files.[br]
+    [b]//media/Music[/b] : this is where PMS will looking for Music files.[br]
+    [b]//media/TV Series[/b] : this is where PMS will looking for TV Series files.[br]
+    [b]Tip:[/b] You can add more volume mappings if you wish PMS has access to it.[br] [br]
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://hub.docker.com/r/gkiselov/plex/</Registry>
@@ -46,7 +46,7 @@
     <Mode>host</Mode>
     <Publish/>
   </Networking>
-  <Environment/>
+  <Environment>
     <Variable>
       <Name>TOKEN</Name>
       <Value>Insert Token from https://plex.tv/claim</Value>
